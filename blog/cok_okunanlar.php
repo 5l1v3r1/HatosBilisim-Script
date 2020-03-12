@@ -1,0 +1,1 @@
+<a href="<?php echo $link; ?>" title="<?php echo $baslik; ?>"><li><?php echo $baslik; ?></li></a>

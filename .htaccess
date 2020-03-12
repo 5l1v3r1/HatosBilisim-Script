@@ -1,0 +1,52 @@
+RewriteEngine On
+RewriteRule ^sayfa/([0-9a-zA-Z-_]+)(/?)$ index.php?do=sayfa&link=$1
+RewriteRule ^s/([0-9a-zA-Z-_]+)(/?)$ index.php?s=$1
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([0-9a-zA-Z-_]+)(/?)$ index.php?do=$1
+
+RewriteRule ^blog/([0-9a-zA-Z-_]+)(/?)$ /blog/index.php?d=$1
+
+RewriteRule ^blog/kategori/([0-9a-zA-Z-_]+)(/?)$ blog/index.php?d=kategori&link=$1
+RewriteRule ^blog/kategori/([0-9a-zA-Z-_]+)/sayfa/([0-9]+)(/?)$ blog/index.php?d=kategori&link=$1&s=$2
+
+RewriteRule ^blog/s/([0-9a-zA-Z-_]+)(/?)$ blog/index.php?s=$1
+RewriteRule ^blog/sayfa/([0-9a-zA-Z-_]+)(/?)$ blog/index.php?d=sayfa&link=$1
+
+RewriteRule ^blog/arama/([^/]*)(/?)$ blog/index.php?d=arama&kelime=$1
+RewriteRule ^blog/arama/([^/]*)/sayfa/([0-9]+)(/?)$ blog/index.php?d=arama&kelime=$1&s=$2
+
+RewriteRule ^blog/etiket/([^/]*)(/?)$ blog/index.php?d=etiket&link=$1
+RewriteRule ^blog/etiket/([^/]*)/sayfa/([0-9]+)(/?)$ blog/index.php?d=etiket&link=$1&s=$2
+
+RewriteRule ^blog/([0-9a-zA-Z-_]+).html$ blog/index.php?d=konu&link=$1
+RewriteRule ^blog/([0-9a-zA-Z-_]+).html/([0-9]+)$ blog/index.php?d=konu&link=$1&s=$2
+
+
+
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW ERRORPAGEID:egyges
+ErrorDocument 500 /500.html
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE egyges:ERRORPAGEID
+
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW ERRORPAGEID:uNyVun
+ErrorDocument 403 /403.html
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE uNyVun:ERRORPAGEID
+
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW ERRORPAGEID:upugeh
+ErrorDocument 401 /401.html
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE upugeh:ERRORPAGEID
+
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW ERRORPAGEID:MyQaSe
+ErrorDocument 400 /400.html
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE MyQaSe:ERRORPAGEID
+
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW ERRORPAGEID:jyjeby
+ErrorDocument 404 /404.html
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE jyjeby:ERRORPAGEID
+
